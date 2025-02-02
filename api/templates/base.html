@@ -10,10 +10,10 @@
 </head>
 
 <body>
-  <header>
+  <header class="container">
     <h1>{% block h1 %}{% endblock %}</h1>
   </header>
-  <main>
+  <main class="container">
     <article>
       <h2>{% block h2 %}{% endblock %}</h2>
       <p></p>
@@ -24,13 +24,15 @@
     </article>
   </main>
 
-  <footer></footer>
-  <div id="content">{% block content %}{% endblock %}</div>
-  <div id="footer">
-    {% block footer %}
-    &copy; Copyright 2025 by <a href="">GAGABONI</a>.
-    {% endblock %}
-  </div>
+  <footer class="container">
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      {% block footer %}
+      &copy; Copyright 2025 by <a href="">GAGABONI</a>.
+      {% endblock %}
+    </div>
+  </footer>
+  {% block script %}{% endblock %}
 </body>
 
 
