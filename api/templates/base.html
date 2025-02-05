@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    {% block head %}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <title>{% block title %}{% endblock %} - gagaboni</title>
+    {% endblock %}
+  </head>
 
-<head>
-  {% block head %}
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/style.css" />
-  <title>{% block title %}{% endblock %} - gagaboni</title>
-  {% endblock %}
-</head>
-
-<body>
-  <header class="container">
-    <h1>{% block h1 %}{% endblock %}</h1>
-  </header>
-  <main class="container">
-    <article>
-      <h2>{% block h2 %}{% endblock %}</h2>
-      <p></p>
-      <section>
-        <h3>{% block h3 %}{% endblock %}</h3>
+  <body>
+    <header class="container">
+      <h1>{% block h1 %}{% endblock %}</h1>
+    </header>
+    <main class="container">
+      <article>
+        <h2>{% block h2 %}{% endblock %}</h2>
+        {% block image %}{% endblock %}
         <p></p>
-      </section>
-    </article>
-  </main>
+        <section>
+          <h3>{% block h3 %}{% endblock %}</h3>
+          <p></p>
+        </section>
+      </article>
+    </main>
 
-  <footer class="container">
-    <div id="content">{% block content %}{% endblock %}</div>
-    <div id="footer">
-      {% block footer %}
-      &copy; Copyright 2025 by <a href="">GAGABONI</a>.
-      {% endblock %}
-    </div>
-  </footer>
-  {% block script %}{% endblock %}
-</body>
-
-
+    <footer class="footer">
+      <div id="content">{% block content %}{% endblock %}</div>
+      <div id="footer">
+        {% block footer %} &copy; Copyright 2025 by <a href="">GAGABONI</a>. {%
+        endblock %}
+      </div>
+    </footer>
+    {% block script %}{% endblock %}
+  </body>
 </html>
